@@ -1,15 +1,16 @@
 name: echo
 on:
-  workflow_call: {}
-
+  workflow_call:
+    inputs:
+      echo-value:
+        required: true
+        type: string
 jobs:
   test-action:
     runs-on: ubuntu-latest
-    env:
-      ECHO: "SET ME"
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: echo
         run: |
-          echo ${{ env.ECHO }}
+          echo ${{ inputs.echo-value }}
