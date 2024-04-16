@@ -4,12 +4,10 @@ on:
 
 jobs:
   test-action-1:
-    runs-on: ubuntu-latest
     env:
       ECHO: "hello"
     uses: ./.github/workflows/echo.yaml
   test-action-2:
-    runs-on: ubuntu-latest
     env:
       ECHO: "world"
     uses: ./.github/workflows/echo.yaml
