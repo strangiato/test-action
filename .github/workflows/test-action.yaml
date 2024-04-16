@@ -1,0 +1,25 @@
+name: my-test-action
+on:
+  push: {}
+
+jobs:
+  test-action-1:
+    runs-on: ubuntu-latest
+    env:
+      ECHO: "hello"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: echo
+        run: |
+          echo ${{ env.ECHO }}
+  test-action-2:
+    runs-on: ubuntu-latest
+    env:
+      ECHO: "world"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: echo
+        run: |
+          echo ${{ env.ECHO }}
