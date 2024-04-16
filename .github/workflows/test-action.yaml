@@ -5,11 +5,11 @@ on:
 jobs:
   test-action-1:
     uses: ./.github/workflows/echo.yaml
-    # env:
-    #   ECHO: "hello"
+    env:
+      ECHO: "hello"
     
   test-action-2:
     uses: ./.github/workflows/echo.yaml
-    # env:
-    #   ECHO: "world"
+    env:
+      ECHO: "world"
     
